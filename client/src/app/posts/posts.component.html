@@ -1,0 +1,57 @@
+<body id="back">
+<div class="conatiner">
+    <h2 class="page-header">Add Contact</h2>
+    <form (submit)="addPost()">
+        <div class="form-group col-md-3">
+            <label>Name</label>
+            <input type="text" [(ngModel)]="name" name="name" class="form-control" required>
+        </div>
+        <div class="form-group col-md-3">
+            <label>Email</label>
+            <input type="text" [(ngModel)]="email" name="email" class="form-control" required>
+        </div>
+        <div class="form-group col-md-3">
+            <label>Post</label>
+            <input type="text" [(ngModel)]="data" name="data" class="form-control" required>
+        </div>
+        <div class="form-group col-md-3">
+            <br>
+            <input type="submit" class="btn btn-success" value="Add">
+        </div>
+    </form>
+</div>
+<div class="col-md-12">
+    <hr>
+</div>
+<div class="container">
+    <div class="col-md-3">
+        Name
+    </div>
+    <div class="col-md-3">
+        e-mail
+    </div>
+    <div class="col-md-3">
+        Posts
+    </div>
+    <div class="col-md-3">
+        Remove
+    </div>
+    <hr>
+    <div *ngFor = "let post of posts">
+        <div class="col-md-3">
+            {{post.name}}
+        </div>
+        <div class="col-md-3">
+            {{post.email}}
+        </div>
+        <div class="col-md-3">
+            {{post.data}}
+        </div>
+        <div class="col-md-3">
+            <input type="button" (click)="deletePost(post._id)" value="Delete" class="btn btn-danger">
+        </div>
+        <br/>
+        <hr>
+    </div>
+</div>
+</body>

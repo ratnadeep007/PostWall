@@ -1,0 +1,17 @@
+{
+  "name": "postwall",
+  "version": "1.0.0",
+  "description": "Simple wall of posts by users.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ratnadeep Bhattacharyya",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.0",
+    "cors": "^2.8.4",
+    "express": "^4.15.4",
+    "mongoose": "^4.11.10"
+  }
+}
